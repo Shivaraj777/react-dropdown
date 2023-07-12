@@ -1,6 +1,7 @@
 /* Dropdown container */
 .dropdownContainer{
     font-size: large;
+    font-weight: 500;
     position: relative;
     top: 10rem;
     align-items: center;
@@ -16,7 +17,7 @@
 }
 
 /*  Dropdown switch */
-.btn{
+.dropdownSwitch{
     height: 4rem;
     width: 18rem;
     font-size: large;
@@ -31,9 +32,13 @@
     border: none;
 }
 
-.btn:hover{
+.dropdownSwitch:hover{
     cursor: pointer;
     background-color: rgb(230, 225, 250)
+}
+
+.dropdownSwitch p{
+    font-size: large;
 }
 
 .dropdownContainer .btn img{

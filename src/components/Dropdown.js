@@ -26,12 +26,12 @@ function Dropdown() {
       <p>Should you use a dropdown?</p>
 
       {/* Dropdown switch */}
-      <button className={styles.btn} onMouseEnter={() => setDisplayDropdown(true)}>
+      <div className={styles.dropdownSwitch} onMouseEnter={() => setDisplayDropdown(true)}>
         <p>
           {dropdownValue !== '' ? dropdownValue : 'Select'}
         </p>
        <img src={ArrrowIcon} alt='dropdown-icon' height='50px' width='50px' />
-      </button>
+      </div>
 
       {/* Dropdown options */}
       {displayDropdown && (
