@@ -4,21 +4,21 @@ import ArrrowIcon from '../images/down-arrow.png';
 
 // Dropdown component
 function Dropdown() {
-  const items = ['...', 'Yes', 'Probably not']; //dropdown items list
+  const options = ['...', 'Yes', 'Probably not']; //dropdown items list
   const [dropdownValue, setDropdownValue] = useState('');  // state to maintain selected item of dropdown
-  const [displayDropdown, setDisplayDropdown] = useState(false); //state to show dropdown items
+  const [displayDropdown, setDisplayDropdown] = useState(false); //state to show dropdown options
 
   // Handle clicking an option from dropdown list
   const handleSelect = (e) => {
-    const data = e.target.innerHTML;
+    const data = e.target.innerHTML; //get target element value
 
-    // if selected option is not default
+    // toggle the value in dropdown with selected value
     if(data !== '...'){
       setDropdownValue(data);
     }else{
       setDropdownValue('');
     }
-    setDisplayDropdown(false);
+    setDisplayDropdown(false); //close dropdown options list
   }
 
   return (
@@ -37,8 +37,8 @@ function Dropdown() {
       {displayDropdown && (
         <div className={styles.dropdownList}>
           <ul>
-            { items.map((item, index) => (
-                <li onClick={handleSelect} value={item} key={index}>{item}</li>
+            { options.map((option, index) => (
+                <li onClick={handleSelect} value={option} key={index}>{option}</li>
             ))}
           </ul>
         </div>
